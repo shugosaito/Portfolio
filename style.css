@@ -1,0 +1,335 @@
+@charset 'UTF-8';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2, h3, p {
+  line-height: 1;
+}
+
+body {
+  background: #111;
+  color: #fafafa; /* fix later */
+}
+
+@media (min-width: 760px) {
+  body {
+    font-size: 20px; /* fix later */
+  }
+}
+
+
+/* ------fv------------ */
+.fv {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100); /* 1vhはfallback */
+  width: 100%;
+  position: relative;
+}
+
+
+.title {
+  display: none;
+}
+
+
+.navigation {
+  width: 16%;
+  margin-left: auto; /* 右寄せ */
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 96px; 
+}
+
+.navigation__item {
+  font-size: 0.8em;
+}
+
+.navigation__item-present {
+  border-bottom: 1px solid #fafafa;
+}
+
+.fvContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fvContainer-white {
+  /* background: #fafafa; */
+  color: #111;
+  top: 56%;
+}
+
+.fv__title {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.fv__text {
+  cursor: pointer;
+  text-align: center;
+}
+
+
+/* section 共通 */
+.about, .sectionBundle {
+  /* width: 100%; */
+  padding: 0 16px;
+}
+
+
+.sectionWrapper {
+  margin-bottom: 6em;  /* workの間と統一→48px*2=96px */
+}
+
+.sectionTitle {
+  font-size: 2em;  /* sp: 32px */
+  margin-bottom: 1.41em; /* 45.12px→font-size2em=32pxが1em計算になるため */
+}
+
+.sectionHeading {
+  font-size: 1.5em; /* 24px */
+  margin-bottom: 1.33em; /* 32px */
+  font-weight: normal;
+}
+
+.about__text, .vision__text, .strength__text, .benefit__text {/* リファクタ */
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+
+/* -----about------- */
+.visible {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+/* .visible::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:radial-gradient( transparent 0%, #111 99.9%);  fix later 画像の顔の位置を中央に持ってくる 
+} */
+
+.visible::after {
+  content: '';
+  position: absolute;
+  top: -10px;   
+  left: 0;
+  width: 100%;
+  height: 24%;   
+  background: linear-gradient(to bottom, #111, transparent);
+  z-index: 10;
+}
+.visible::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24%;  
+  background: linear-gradient(to top, #111, transparent);
+  z-index: 10;
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  font-size: 0.8em;
+  line-height: 1;
+  margin-right: 2em;
+}
+
+@media (min-width: 760px) {
+  .sectionWrapper-about {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+
+  .visible {
+    margin-bottom: 0;
+    flex-basis: 40%;
+  }
+
+  .textContainer-about {
+    align-self: center; /* fix later */
+    flex-basis: 50%;
+  }
+
+
+
+  .sectionBundle {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vision, .strength {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about, .sectionBundle {
+    height: 100vh;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .about {
+    height: 100vh;
+    position: relative;
+    /* display: flex; */
+    /* align-items: ; */
+  }
+
+  .sectionWrapper-about {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+/* work */
+
+.work {
+  width: 100%;
+  padding: 0 16px;
+  /* max-width: 1440px; 
+  margin: 0 auto;
+  レスポンシブ時 */
+}
+
+.work__title { /* about__titleと統一できるか */
+  font-size: 2em;  /* sp: 32px */
+  margin-bottom: 2.12em; /* 68px→font-size2em=32pxが1em計算になるため */
+}
+
+.workWrapper {  
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.workContainer {
+  /* width: 100%; */
+  margin-bottom: 4.24em; /* titleのmbと同じ */
+}
+
+.work__img {
+  display: inline-block;
+  margin-bottom: 3em;
+}
+
+.work__text {
+  font-size: 0.8em;
+}
+
+
+@media (min-width: 760px) {
+  .workContainer { 
+    width: 56%;  /* fix later アニメーションとのバランスを見て調整*/
+  }
+}
+
+@media (min-width: 1024px) {
+  .work {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+
+/* ---------social------ */
+.social {
+  width: 100%;
+  padding: 0 16px;
+  margin-bottom: 6em;
+}
+
+.social__title { /* about__titleと統一できるか */
+  font-size: 2em; 
+  margin-bottom: 2.12em; 
+}
+
+
+
+
+/* footer */
+footer {
+  height: 40px; /* navigationと同じ高さ */
+  text-align: center;
+}
+
+
+
+/* -------work--------- */
+
+canvas {
+  margin: 0;
+     position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-work {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+
+/* .btn {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fafafa;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.previousLink {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fafafa;
+  cursor: pointer;
+  z-index: 100;
+
+  text-decoration: none;
+} */
