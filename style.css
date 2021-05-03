@@ -41,7 +41,7 @@ body {
 /* ------fv------------ */
 .fv {
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100); /* 1vhはfallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   position: relative;
 }
@@ -124,7 +124,7 @@ body {
 .sectionTitle-vision,
 .sectionTitle-strength,
 .sectionTitle-benefit {
-  opacity: 0; /* gsap */
+  opacity: 0;
 }
 
 .sectionWrapper {
@@ -134,7 +134,7 @@ body {
 .sectionWrapper-vision,
 .sectionWrapper-strength,
 .sectionWrapper-benefit {
-  opacity: 0; /* gsap */
+  opacity: 0;
 }
 
 .sectionHeading {
@@ -147,7 +147,6 @@ body {
 .vision__text,
 .strength__text,
 .benefit__text {
-  /* リファクタ */
   font-size: 0.8em;
   margin-bottom: 1em;
 }
@@ -157,7 +156,7 @@ body {
 .visible {
   position: relative;
   margin-bottom: 2em;
-  opacity: 0; /* gsap */
+  opacity: 0;
 }
 
 .visible::after {
@@ -182,7 +181,7 @@ body {
 }
 
 .textContainer-about {
-  opacity: 0; /* gsap */
+  opacity: 0;
 }
 
 .social__list {
@@ -241,4 +240,35 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+/* -------work--------- */
+
+canvas {
+  margin: 0;
+     position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-work {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+
+.btn {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fafafa;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 100;
 }
