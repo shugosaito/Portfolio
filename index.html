@@ -1,164 +1,159 @@
 <!DOCTYPE html>
-<html lang='ja'>
-<head>
- <meta charset='UTF-8'>
- <meta name='viewport' content='width=device-width, initial-scale=1.0'>
- <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
- <meta name='description' content='' /> 
- <link rel='stylesheet' href='style.css'>
- <title></title>
-</head>
-<body>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="style.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="fv">
+      <header class="header">
+        <h1 class="title">Portfolio created by S, Shugo</h1>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item-present">About</li>
+            <li class="navigation__item">
+              <a href="work.html" class="navigation__link">Work</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-  <div class="fv">
-    <header class="header">
-      <h1 class="title">Portfolio created by S, Shugo</h1> <!-- display:none→表示する必要はないがh1は置きたいため -->
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item navigation__item-present">About</li>
-          <li class="navigation__item"><a href="work.html" class="navigation__link">Work</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="fvContainer">
-      <h2 class="fv__title">Welcome</h2>
-      <!-- <p class="fv__text">Ready to Explore?</p>
-      <p class="fv__text">Look at my Work?</p>  -->
-    </div>
-
-    <div class="fvContainer fvContainer-white">
-      <!-- <h2 class="white-title">Portfolio</h2> -->
-      <p class="white-text">Created by S, Shugo</p>
-    </div>
-  </div>
-
-  <section class="about">
-    <h2 class="sectionTitle">About</h2>
-    <div class="sectionWrapper sectionWrapper-about"> <!-- pc flex -->
-      <div class="visible">
-        <img src="img/myself-400.jpg" alt="" class="about__img" width="140" height="100">
+      <div class="fvContainer">
+        <h2 class="fv__title">Welcome</h2>
       </div>
 
-      <div id="about" class="textContainer textContainer-about"> <!-- 子要素を小出ししたいから他の項目とクラス名は別々にする -->
-        <p class="about__text">齊藤 柊吾</p>
-        <p class="about__text">高校卒業後、トレーナーを目指してアメリカへ留学</p>
-        <p class="about__text">Hello Worldに感動しプログラミングの道に</p>
-        <!-- <p class="about__text">プログラミングに目覚め、web制作を始める。</p> -->
-        <p class="about__text">プログラミングの熱意がトレーナーのそれを凌駕したため休学を決意</p>
-        <p class="about__text">将来のつよつよエンジニア</p>
-        
-        <ul class="social__list">
-          <li class="social__item"><a href="https://github.com/shugosaito" target="_blank" rel="noopener noreferrer" class="social__link">Github</a></li>
-          <li class="social__item"><a href="https://www.linkedin.com/in/shugo-saito-21b750207/" target="_blank" rel="noopener noreferrer" class="social__link">LinkedIn</a></li>
-          <li class="social__item"><a href="https://twitter.com/shugo_engineer" target="_blank" rel="noopener noreferrer" class="social__link">Twitter</a></li>
-        </ul>
+      <div class="fvContainer fvContainer-white">
+        <p class="white-text">Created by S, Shugo</p>
+        <p>You're about to find a rising star</p>
       </div>
     </div>
-  </section>
 
-  <div class="sectionBundle">
+    <section class="about">
+      <h2 class="sectionTitle">About</h2>
+      <div class="sectionWrapper sectionWrapper-about">
+        <div class="visible">
+          <img
+            srcset="img/myself-400.jpg 400w, img/myself-800.jpg 800w"
+            src="img/myself-800.jpg"
+            alt=""
+            class="about__img"
+            width="140"
+            height="100"
+          />
+        </div>
 
-    <section class="vision">
-      <h2 class="sectionTitle">Vision</h2> <!-- 日本語化＋英語は擬似要素 -->
-      <div class="sectionWrapper">
-      <h3 class="sectionHeading">つよいエンジニアに</h3>
-      
-      <div id="vision" class="textContainer"> <!-- fix later 文章の分割 -->
-        <p class="vision__text">なぜつよつよエンジニアになりたいのか</p>
-        <p class="vision__text">それは誰しも強くありたいから</p>
-        <p class="vision__text">つよいエンジニアに</p>
-      </div>
-    </div>
-  </section>
-  
-  
-  <section class="strength">
-    <h2 class="sectionTitle">Strength</h2> <!-- 日本語化＋英語は擬似要素 -->
-    <div class="sectionWrapper">
-      <h3 class="sectionHeading">エンジニアとしての強み</h3>
-      
-      <div id="strong" class="textContainer"> <!-- 要素は後で追加 -->
-        <p class="strength__text">異国の地での生活で身につけた環境適応能力</p>
-        <p class="strength__text">トレーニングで培った筋力</p>
-        <p class="strength__text">エラー文に燃える精神力</p>
-        <p class="strength__text">英語での情報収集能力</p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="benefit">
-    <h2 class="sectionTitle">Benefit</h2> <!-- 日本語化＋英語は擬似要素 -->
-    <div class="sectionWrapper">
-      <h3 class="sectionHeading">採用時のメリット</h3>
-      
-      <div id="benefit" class="textContainer benefit"> <!-- 要素は後で追加 -->
-        <p class="benefit__text">負けず嫌いなため、詰まった所があれば公式ドキュメント等を駆使してできるまで調べます。</p>
-        <p class="benefit__text">どの技術も面白く見えるため、御社で指定されたものを第一言語として愛情を持って学ぶことができます。</p>
-        <p class="benefit__text">健康体で欠勤の心配が少ないこと。ワクチン接種も済ませているため、コロナで欠勤する可能性は日本でトップクラスに低いです。</p>
-        <p class="benefit__text">筋トレと栄養の知識を提供することによって御社の社員の活力を高めます。エンジニアとトレーナーを同時に雇うことが可能になります。</p>
-      </div>
-    </div>
-  </section>
-</div>
-  
-  <!-- <section class="work">
-    <h2 class="work__title">Work</h2>
-    <div class="workWrapper">  
-      <div class="workContainer">
-        <img src="img/test.jpg" alt="" class="work__img" width="280" height="200">
-        <div class="work__textContainer">
-          <h3 class="sectionHeading">Twitter Clone</h3>
-          <p class="work__text">Twitter APIを使ったClone。キーワードやトレンドを含むツイートを取得し表示。</p>
+        <div id="about" class="textContainer textContainer-about">
+          <p class="about__text">齊藤 柊吾</p>
+          <p class="about__text">
+            高校卒業後、トレーナーを目指してアメリカへ留学
+          </p>
+          <p class="about__text">Hello Worldに感動しプログラミングの道に</p>
+          <p class="about__text">
+            プログラミングの熱意がトレーナーのそれを凌駕したため休学を決意
+          </p>
+          <p class="about__text">将来のつよつよエンジニア</p>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a
+                href="https://github.com/shugosaito"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link"
+                >Github</a
+              >
+            </li>
+            <li class="social__item">
+              <a
+                href="https://www.linkedin.com/in/shugo-saito-21b750207/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="social__item">
+              <a
+                href="https://twitter.com/shugo_engineer"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link"
+                >Twitter</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="workContainer">
-        <img src="img/test.jpg" alt="" class="work__img" width="280" height="200">
-        <div class="work__textContainer">
-          <h3 class="sectionHeading">BlackJack</h3>
-          <p class="work__text">Vanilla Javascriptで作成したBlackJack。ゲーム内の機能を細かく関数に分けて管理。CPの処理を自動化することで快適なプレイ体験を提供。</p>
+    </section>
+
+    <div class="sectionBundle">
+      <section class="vision">
+        <h2 class="sectionTitle sectionTitle-vision">Vision</h2>
+        <!-- 日本語化＋英語は擬似要素 -->
+        <div class="sectionWrapper sectionWrapper-vision">
+          <h3 class="sectionHeading">つよいエンジニアに</h3>
+
+          <div id="vision" class="textContainer">
+            <p class="vision__text">なぜつよつよエンジニアになりたいのか</p>
+            <p class="vision__text">それは誰しも強くありたいから</p>
+            <p class="vision__text">つよいエンジニアに</p>
+          </div>
         </div>
-      </div>
-      <div class="workContainer">
-        <img src="img/test.jpg" alt="" class="work__img" width="280" height="200">
-        <div class="work__textContainer">
-          <h3 class="sectionHeading">Blog</h3>
-          <p class="work__text">文章に加えて画像付きの投稿を可能にしたブログ。画像の種類による判別あり。</p>
+      </section>
+
+      <section class="strength">
+        <h2 class="sectionTitle sectionTitle-strength">Strength</h2>
+        <div class="sectionWrapper sectionWrapper-strength">
+          <h3 class="sectionHeading">エンジニアとしての強み</h3>
+
+          <div id="strong" class="textContainer">
+            <p class="strength__text">
+              異国の地での生活で身につけた環境適応能力
+            </p>
+            <p class="strength__text">トレーニングで培った筋力</p>
+            <p class="strength__text">エラー文に燃える精神力</p>
+            <p class="strength__text">英語での情報収集能力</p>
+          </div>
         </div>
-      </div>
-      <div class="workContainer">
-        <img src="img/test.jpg" alt="" class="work__img" width="280" height="200">
-        <div class="work__textContainer">
-          <h3 class="sectionHeading">Invader Game</h3>
-          <p class="work__text">インベーダーゲーム。Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo possimus impedit nostrum adipisci! Molestiae quos hic distinctio aliquid ratione!</p>
+      </section>
+
+      <section class="benefit">
+        <h2 class="sectionTitle sectionTitle-benefit">Benefit</h2>
+        <div class="sectionWrapper sectionWrapper-benefit">
+          <h3 class="sectionHeading">採用時のメリット</h3>
+
+          <div id="benefit" class="textContainer benefit">
+            <p class="benefit__text">
+              負けず嫌いなため、詰まった所があれば公式ドキュメント等を駆使してできるまで調べます。
+            </p>
+            <p class="benefit__text">
+              どの技術も面白く見えるため、御社で指定されたものを第一言語として愛情を持って学ぶことができます。
+            </p>
+            <p class="benefit__text">
+              健康体で欠勤の心配が少ないこと。ワクチン接種も済ませているため、コロナで欠勤する可能性は日本でトップクラスに低いです。
+            </p>
+            <p class="benefit__text">
+              筋トレと栄養の知識を提供することによって御社の社員の活力を高めます。エンジニアとトレーナーを同時に雇うことが可能になります。
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="workContainer">
-        <img src="img/test.jpg" alt="" class="work__img" width="280" height="200">
-        <div class="work__textContainer">
-          <h3 class="sectionHeading">Weather App</h3>
-          <p class="work__text">APIを使用した天気予報アプリ。Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt porro consectetur accusamus ex beatae nulla! Eligendi reiciendis quidem cumque vitae.</p>
-        </div>
-      </div>
+      </section>
     </div>
-  </section> -->
 
-  <!-- <section class="social">
-    <h2 class="social__title">Social</h2>
-    <ul class="social__list">
-      <li class="social__item"><a href="https://github.com/shugosaito" target="_blank" rel="noopener noreferrer" class="social__link">Github</a></li>
-      <li class="social__item"><a href="https://www.linkedin.com/in/shugo-saito-21b750207/" target="_blank" rel="noopener noreferrer" class="social__link">LinkedIn</a></li>
-      <li class="social__item"><a href="https://twitter.com/shugo_engineer" target="_blank" rel="noopener noreferrer" class="social__link">Twitter</a></li>
-    </ul>
-  </section> -->
-
-  <!-- <footer>
-    <small>©︎2021 Shugo Saito</small>
-  </footer> -->
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q==" crossorigin="anonymous"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js' integrity='sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==' crossorigin='anonymous'></script>
- <script src='main.js'></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+      integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
 </html>

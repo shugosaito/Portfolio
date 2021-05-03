@@ -21,22 +21,84 @@ window.addEventListener("resize", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
-tl.from(".fv", {duration: 2, backgroundColor: "white" })
-  .from(".fv__title", { duration: 2, opacity: 0 })
-  .from(".fv__text", { duration: 1, opacity: 0 });
-// gsap.to('.fv', {backgroundColor: "white"})
+tl.from(".fv", { duration: 2, backgroundColor: "white" })
+  .from(".fv__title", { duration: 1, opacity: 0, y: 40 })
+  .from(".navigation__item", { duration: 1, opacity: 0, stagger: 0.2 });
 
-// gsap.to(".workContainer", {  //fix later
-//   scrollTrigger: {
-//     trigger: "#benefit",
-//     start: "top 100px",
-//     endTrigger: ".social",
-//     end: "top 0px",
-//     scrub: 1,
-//     markers: true,
-//     // pin: '.workWrapper'
-//   },
-//   xPercent: -90,
-//   ease: "none",
-//   stagger: .1
-// });
+gsap.to(".visible", {
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 72%",
+    end: "top 10%",
+  },
+  opacity: 1,
+});
+
+gsap.to(".textContainer-about", {
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top 32%",
+    end: "top 10%",
+  },
+  opacity: 1,
+});
+
+gsap.to(".sectionTitle-vision", {
+  scrollTrigger: {
+    trigger: ".vision",
+    start: "top 96%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
+
+gsap.to(".sectionWrapper-vision", {
+  scrollTrigger: {
+    trigger: ".vision",
+    start: "top 88%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
+
+gsap.to(".sectionTitle-strength", {
+  scrollTrigger: {
+    trigger: ".strength",
+    start: "top 96%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
+
+gsap.to(".sectionWrapper-strength", {
+  scrollTrigger: {
+    trigger: ".strength",
+    start: "top 88%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
+
+gsap.to(".sectionTitle-benefit", {
+  scrollTrigger: {
+    trigger: ".benefit",
+    start: "top 96%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
+
+gsap.to(".sectionWrapper-benefit", {
+  scrollTrigger: {
+    trigger: ".benefit",
+    start: "top 88%",
+    end: "top 10%",
+  },
+  y: -16,
+  opacity: 1,
+});
