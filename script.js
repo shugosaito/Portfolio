@@ -152,8 +152,24 @@ const onClick = () => {
   if (intersects.length > 0) {
     selectedObject = intersects[0];
     const id = selectedObject.object.id;
-    if (id === 6) {
-      window.location.href = "https://shugosaito.github.io/Portfolio/";
+    console.log(id);
+
+    switch (id) {
+      case 6:
+        window.location.href = "https://shugosaito.github.io/Portfolio/";
+        break;
+      case 7:
+        window.open("https://shugosaito.github.io/blackjack/", "_blank");
+        break;
+      case 8:
+        window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
+        break;
+      case 9:
+        window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
+        break;
+      case 10:
+        window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
+        break;
     }
   }
 };
