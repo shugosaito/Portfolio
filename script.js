@@ -162,10 +162,10 @@ const onClick = () => {
         window.open("https://shugosaito.github.io/blackjack/", "_blank");
         break;
       case 8:
-        window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
+        window.open("https://shugosaito.github.io/To-Do-App/", "_blank");
         break;
       case 9:
-        window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
+        window.open("https://shugosaito.github.io/candy/", "_blank");
         break;
       case 10:
         window.open("https://salty-crag-73377.herokuapp.com/", "_blank");
