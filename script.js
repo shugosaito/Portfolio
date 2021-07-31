@@ -156,7 +156,7 @@ const onClick = () => {
 
     switch (id) {
       case 6:
-        window.open("https://fantastic-chat-app.netlify.app/", "_blank");
+        window.open("https://shugosaito.github.io/resas-api/", "_blank");
         break;
       case 7:
         window.open("https://shugosaito.github.io/blackjack/", "_blank");
